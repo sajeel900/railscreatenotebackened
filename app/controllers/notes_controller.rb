@@ -11,10 +11,8 @@ class NotesController < ApplicationController
 
   # POST /notes or /notes.json
   def create
-    puts "in the create method"
+
     @note = Note.new(note_params)
-    puts "note params #{note_params}"
-    puts "notes object #{@note}"
     @note.user = @user
 
       if @note.save
